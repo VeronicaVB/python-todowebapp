@@ -1,9 +1,13 @@
 import streamlit as st
 from modules import functions
+import os
+
 
 todos = functions.get_todos()
 
-
+if not os.path.exists(functions.FILEPATH):
+    with open(functions.FILEPATH, "w") as file:
+        pass
 def add_todo():
     todo = st.session_state['new_todo'] + "\n"  # new_todo is the id of the text_input
     todos.append(todo)
