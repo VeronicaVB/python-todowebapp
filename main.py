@@ -31,4 +31,4 @@ st.text_input(label="", placeholder="Add new todo...",
 
 # Session state shows the widgets information.
 # To appear in the sessions_state we need to add a key to the widget
-st.session_state
+# st.session_state
